@@ -1,0 +1,786 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+USBJT2                              00000000    000000B8 =         184. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  _EZUSB_Discon                   
+     00000000  _EZUSB_GetStringDscr            
+     00000000  _EZUSB_Resume                   
+     00000000  _EZUSB_Susp                     
+     00000000  l_BIT_BANK                      
+     00000000  l_BSEG                          
+     00000000  l_BSEG_BYTES                    
+     00000000  l_CABS                          
+     00000000  l_GSINIT                        
+     00000000  l_GSINIT1                       
+     00000000  l_GSINIT5                       
+     00000000  l_IABS                          
+     00000000  l_ISEG                          
+     00000000  l_OSEG                          
+     00000000  l_PSEG                          
+     00000000  l_REG_BANK_1                    
+     00000000  l_REG_BANK_2                    
+     00000000  l_REG_BANK_3                    
+     00000000  l_RSEG                          
+     00000000  l_RSEG0                         
+     00000000  l_RSEG1                         
+     00000000  l_USBJT                         
+     00000000  l_USBJV                         
+     00000000  l_USBJV2                        
+     00000000  l_XABS                          
+     00000000  l_XSEG                          
+     00000000  l__CODE                         
+     00000000  s_BSEG                          
+     00000000  s_CABS                          
+     00000000  s_DSEG                          
+     00000000  s_HOME                          
+     00000000  s_IABS                          
+     00000000  s_ISEG                          
+     00000000  s_REG_BANK_0                    
+     00000000  s_RSEG                          
+     00000000  s_RSEG0                         
+     00000000  s_RSEG1                         
+     00000000  s_USBJT                         
+     00000000  s_USBJT2                        
+     00000000  s_USBJV                         
+     00000000  s_USBJV0                        
+     00000000  s_USBJV2                        
+     00000000  s_USBJV21                       
+     00000000  s_XABS                          
+     00000003  l_GSFINAL                       
+     00000003  l_GSINIT0                       
+     00000003  l_XINIT                         
+     00000003  l_XISEG                         
+     00000008  l_REG_BANK_0                    
+     00000008  s_REG_BANK_1                    
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+USBJT2                              00000000    000000B8 =         184. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000000A  l_CONST                         
+     0000000A  l_GSINIT2                       
+     00000010  s_REG_BANK_2                    
+     00000018  s_BIT_BANK                      
+     00000018  s_OSEG                          
+     00000018  s_REG_BANK_3                    
+     0000001C  s_SSEG                          
+     00000020  s_BSEG_BYTES                    
+     00000020  s__CODE                         
+     00000022  l_GSINIT3                       
+     0000002A  l_GSINIT4                       
+     00000046  l_USBJV0                        
+     00000056  l_USBJV21                       
+     00000080  l_DSEG                          
+     000000B8  l_USBJT2                        
+     000000E4  l_SSEG                          
+     00000100  l_IRAM                          
+     000001B9  l_HOME                          
+     000001B9  s_GSINIT0                       
+     000001BC  s_GSINIT1                       
+     000001BC  s_GSINIT2                       
+     000001C6  s_GSINIT3                       
+     000001E8  s_GSINIT4                       
+     00000212  s_GSFINAL                       
+     00000212  s_GSINIT                        
+     00000212  s_GSINIT5                       
+     00000215  s_CSEG                          
+     00000735  l_CSEG                          
+     0000094A  s_CONST                         
+     00000954  s_XINIT                         
+     00001000  s_PSEG                          
+     00001000  s_XISEG                         
+     00001000  s_XSEG                          
+     00001A00  USB_Jump_Table                     JUMPTABLE
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+USBJV21                             00000000    00000056 =          86. bytes (ABS,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000055  USB_AutoVector2                    JUMPTABLE
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+USBJV0                              00000000    00000046 =          70. bytes (ABS,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000045  USB_AutoVector                     JUMPTABLE
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000080  _IOA                               slave
+     00000080  _PA0                               slave
+     00000081  _PA1                               slave
+     00000081  _SP                                slave
+     00000082  _DPL                               slave
+     00000082  _PA2                               slave
+     00000083  _DPH                               slave
+     00000083  _PA3                               slave
+     00000084  _DPL1                              slave
+     00000084  _PA4                               slave
+     00000085  _DPH1                              slave
+     00000085  _PA5                               slave
+     00000086  _DPS                               slave
+     00000086  _PA6                               slave
+     00000087  _PA7                               slave
+     00000087  _PCON                              slave
+     00000088  _IT0                               slave
+     00000088  _TCON                              slave
+     00000089  _IE0                               slave
+     00000089  _TMOD                              slave
+     0000008A  _IT1                               slave
+     0000008A  _TL0                               slave
+     0000008B  _IE1                               slave
+     0000008B  _TL1                               slave
+     0000008C  _TH0                               slave
+     0000008C  _TR0                               slave
+     0000008D  _TF0                               slave
+     0000008D  _TH1                               slave
+     0000008E  _CKCON                             slave
+     0000008E  _TR1                               slave
+     0000008F  _TF1                               slave
+     00000090  _IOB                               slave
+     00000090  _PB0                               slave
+     00000091  _EXIF                              slave
+     00000091  _PB1                               slave
+     00000092  _PB2                               slave
+     00000092  __XPAGE                            slave
+     00000093  _PB3                               slave
+     00000094  _PB4                               slave
+     00000095  _PB5                               slave
+     00000096  _PB6                               slave
+     00000097  _PB7                               slave
+     00000098  _RI                                slave
+     00000098  _SCON0                             slave
+     00000099  _SBUF0                             slave
+     00000099  _TI                                slave
+     0000009A  _AUTOPTRH1                         slave
+     0000009A  _RB8                               slave
+     0000009B  _AUTOPTRL1                         slave
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000009B  _TB8                               slave
+     0000009C  _REN                               slave
+     0000009D  _AUTOPTRH2                         slave
+     0000009D  _SM2                               slave
+     0000009E  _AUTOPTRL2                         slave
+     0000009E  _SM1                               slave
+     0000009F  _SM0                               slave
+     000000A0  _IOC                               slave
+     000000A0  _PC0                               slave
+     000000A1  _INT2CLR                           slave
+     000000A1  _PC1                               slave
+     000000A2  _INT4CLR                           slave
+     000000A2  _PC2                               slave
+     000000A3  _PC3                               slave
+     000000A4  _PC4                               slave
+     000000A5  _PC5                               slave
+     000000A6  _PC6                               slave
+     000000A7  _PC7                               slave
+     000000A8  _EX0                               slave
+     000000A8  _IE                                slave
+     000000A9  _ET0                               slave
+     000000AA  _EP2468STAT                        slave
+     000000AA  _EX1                               slave
+     000000AB  _EP24FIFOFLGS                      slave
+     000000AB  _ET1                               slave
+     000000AC  _EP68FIFOFLGS                      slave
+     000000AC  _ES0                               slave
+     000000AD  _ET2                               slave
+     000000AE  _ES1                               slave
+     000000AF  _AUTOPTRSETUP                      slave
+     000000AF  _EA                                slave
+     000000B0  _IOD                               slave
+     000000B0  _PD0                               slave
+     000000B1  _IOE                               slave
+     000000B1  _PD1                               slave
+     000000B2  _OEA                               slave
+     000000B2  _PD2                               slave
+     000000B3  _OEB                               slave
+     000000B3  _PD3                               slave
+     000000B4  _OEC                               slave
+     000000B4  _PD4                               slave
+     000000B5  _OED                               slave
+     000000B5  _PD5                               slave
+     000000B6  _OEE                               slave
+     000000B6  _PD6                               slave
+     000000B7  _PD7                               slave
+     000000B8  _IP                                slave
+     000000B8  _PX0                               slave
+     000000B9  _PT0                               slave
+     000000BA  _EP01STAT                          slave
+     000000BA  _PX1                               slave
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000BB  _GPIFTRIG                          slave
+     000000BB  _PT1                               slave
+     000000BC  _PS0                               slave
+     000000BD  _GPIFSGLDATH                       slave
+     000000BD  _PT2                               slave
+     000000BE  _GPIFSGLDATLX                      slave
+     000000BE  _PS1                               slave
+     000000BF  _GPIFSGLDATLNOX                    slave
+     000000C0  _RI1                               slave
+     000000C0  _SCON1                             slave
+     000000C1  _SBUF1                             slave
+     000000C1  _TI1                               slave
+     000000C2  _RB81                              slave
+     000000C3  _TB81                              slave
+     000000C4  _REN1                              slave
+     000000C5  _SM21                              slave
+     000000C6  _SM11                              slave
+     000000C7  _SM01                              slave
+     000000C8  _CP_RL2                            slave
+     000000C8  _T2CON                             slave
+     000000C9  _C_T2                              slave
+     000000CA  _RCAP2L                            slave
+     000000CA  _TR2                               slave
+     000000CB  _EXEN2                             slave
+     000000CB  _RCAP2H                            slave
+     000000CC  _TCLK                              slave
+     000000CC  _TL2                               slave
+     000000CD  _RCLK                              slave
+     000000CD  _TH2                               slave
+     000000CE  _EXF2                              slave
+     000000CF  _TF2                               slave
+     000000D0  _P                                 slave
+     000000D0  _PSW                               slave
+     000000D1  _FL                                slave
+     000000D2  _OV                                slave
+     000000D3  _RS0                               slave
+     000000D4  _RS1                               slave
+     000000D5  _F0                                slave
+     000000D6  _AC                                slave
+     000000D7  _CY                                slave
+     000000D8  _EICON                             slave
+     000000DB  _INT6                              slave
+     000000DC  _RESI                              slave
+     000000DD  _ERESI                             slave
+     000000DF  _SMOD1                             slave
+     000000E0  _ACC                               slave
+     000000E8  _EIE                               slave
+     000000E8  _EUSB                              slave
+     000000E9  _EI2C                              slave
+     000000EA  _EIEX4                             slave
+     000000EB  _EIEX5                             slave
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000EC  _EIEX6                             slave
+     000000F0  _B                                 slave
+     000000F8  _EIP                               slave
+     000000F8  _PUSB                              slave
+     000000F9  _PI2C                              slave
+     000000FA  _EIPX4                             slave
+     000000FB  _EIPX5                             slave
+     000000FC  _EIPX6                             slave
+     0000E400  _GPIF_WAVE_DATA                    slave
+     0000E480  _RES_WAVEDATA_END                  slave
+     0000E50D  _GPCR2                             slave
+     0000E600  _CPUCS                             slave
+     0000E601  _IFCONFIG                          slave
+     0000E602  _PINFLAGSAB                        slave
+     0000E603  _PINFLAGSCD                        slave
+     0000E604  _FIFORESET                         slave
+     0000E605  _BREAKPT                           slave
+     0000E606  _BPADDRH                           slave
+     0000E607  _BPADDRL                           slave
+     0000E608  _UART230                           slave
+     0000E609  _FIFOPINPOLAR                      slave
+     0000E60A  _REVID                             slave
+     0000E60B  _REVCTL                            slave
+     0000E60C  _GPIFHOLDAMOUNT                    slave
+     0000E610  _EP1OUTCFG                         slave
+     0000E611  _EP1INCFG                          slave
+     0000E612  _EP2CFG                            slave
+     0000E613  _EP4CFG                            slave
+     0000E614  _EP6CFG                            slave
+     0000E615  _EP8CFG                            slave
+     0000E618  _EP2FIFOCFG                        slave
+     0000E619  _EP4FIFOCFG                        slave
+     0000E61A  _EP6FIFOCFG                        slave
+     0000E61B  _EP8FIFOCFG                        slave
+     0000E620  _EP2AUTOINLENH                     slave
+     0000E621  _EP2AUTOINLENL                     slave
+     0000E622  _EP4AUTOINLENH                     slave
+     0000E623  _EP4AUTOINLENL                     slave
+     0000E624  _EP6AUTOINLENH                     slave
+     0000E625  _EP6AUTOINLENL                     slave
+     0000E626  _EP8AUTOINLENH                     slave
+     0000E627  _EP8AUTOINLENL                     slave
+     0000E628  _ECCCFG                            slave
+     0000E629  _ECCRESET                          slave
+     0000E62A  _ECC1B0                            slave
+     0000E62B  _ECC1B1                            slave
+     0000E62C  _ECC1B2                            slave
+     0000E62D  _ECC2B0                            slave
+     0000E62E  _ECC2B1                            slave
+     0000E62F  _ECC2B2                            slave
+     0000E630  _EP2FIFOPFH                        slave
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E631  _EP2FIFOPFL                        slave
+     0000E632  _EP4FIFOPFH                        slave
+     0000E633  _EP4FIFOPFL                        slave
+     0000E634  _EP6FIFOPFH                        slave
+     0000E635  _EP6FIFOPFL                        slave
+     0000E636  _EP8FIFOPFH                        slave
+     0000E637  _EP8FIFOPFL                        slave
+     0000E640  _EP2ISOINPKTS                      slave
+     0000E641  _EP4ISOINPKTS                      slave
+     0000E642  _EP6ISOINPKTS                      slave
+     0000E643  _EP8ISOINPKTS                      slave
+     0000E648  _INPKTEND                          slave
+     0000E649  _OUTPKTEND                         slave
+     0000E650  _EP2FIFOIE                         slave
+     0000E651  _EP2FIFOIRQ                        slave
+     0000E652  _EP4FIFOIE                         slave
+     0000E653  _EP4FIFOIRQ                        slave
+     0000E654  _EP6FIFOIE                         slave
+     0000E655  _EP6FIFOIRQ                        slave
+     0000E656  _EP8FIFOIE                         slave
+     0000E657  _EP8FIFOIRQ                        slave
+     0000E658  _IBNIE                             slave
+     0000E659  _IBNIRQ                            slave
+     0000E65A  _NAKIE                             slave
+     0000E65B  _NAKIRQ                            slave
+     0000E65C  _USBIE                             slave
+     0000E65D  _USBIRQ                            slave
+     0000E65E  _EPIE                              slave
+     0000E65F  _EPIRQ                             slave
+     0000E660  _GPIFIE                            slave
+     0000E661  _GPIFIRQ                           slave
+     0000E662  _USBERRIE                          slave
+     0000E663  _USBERRIRQ                         slave
+     0000E664  _ERRCNTLIM                         slave
+     0000E665  _CLRERRCNT                         slave
+     0000E666  _INT2IVEC                          slave
+     0000E667  _INT4IVEC                          slave
+     0000E668  _INTSETUP                          slave
+     0000E670  _PORTACFG                          slave
+     0000E671  _PORTCCFG                          slave
+     0000E672  _PORTECFG                          slave
+     0000E678  _I2CS                              slave
+     0000E679  _I2DAT                             slave
+     0000E67A  _I2CTL                             slave
+     0000E67B  _XAUTODAT1                         slave
+     0000E67C  _XAUTODAT2                         slave
+     0000E67D  _UDMACRCH                          slave
+     0000E67E  _UDMACRCL                          slave
+     0000E67F  _UDMACRCQUAL                       slave
+     0000E680  _USBCS                             slave
+     0000E681  _SUSPEND                           slave
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E682  _WAKEUPCS                          slave
+     0000E683  _TOGCTL                            slave
+     0000E684  _USBFRAMEH                         slave
+     0000E685  _USBFRAMEL                         slave
+     0000E686  _MICROFRAME                        slave
+     0000E687  _FNADDR                            slave
+     0000E68A  _EP0BCH                            slave
+     0000E68B  _EP0BCL                            slave
+     0000E68D  _EP1OUTBC                          slave
+     0000E68F  _EP1INBC                           slave
+     0000E690  _EP2BCH                            slave
+     0000E691  _EP2BCL                            slave
+     0000E694  _EP4BCH                            slave
+     0000E695  _EP4BCL                            slave
+     0000E698  _EP6BCH                            slave
+     0000E699  _EP6BCL                            slave
+     0000E69C  _EP8BCH                            slave
+     0000E69D  _EP8BCL                            slave
+     0000E6A0  _EP0CS                             slave
+     0000E6A1  _EP1OUTCS                          slave
+     0000E6A2  _EP1INCS                           slave
+     0000E6A3  _EP2CS                             slave
+     0000E6A4  _EP4CS                             slave
+     0000E6A5  _EP6CS                             slave
+     0000E6A6  _EP8CS                             slave
+     0000E6A7  _EP2FIFOFLGS                       slave
+     0000E6A8  _EP4FIFOFLGS                       slave
+     0000E6A9  _EP6FIFOFLGS                       slave
+     0000E6AA  _EP8FIFOFLGS                       slave
+     0000E6AB  _EP2FIFOBCH                        slave
+     0000E6AC  _EP2FIFOBCL                        slave
+     0000E6AD  _EP4FIFOBCH                        slave
+     0000E6AE  _EP4FIFOBCL                        slave
+     0000E6AF  _EP6FIFOBCH                        slave
+     0000E6B0  _EP6FIFOBCL                        slave
+     0000E6B1  _EP8FIFOBCH                        slave
+     0000E6B2  _EP8FIFOBCL                        slave
+     0000E6B3  _SUDPTRH                           slave
+     0000E6B4  _SUDPTRL                           slave
+     0000E6B5  _SUDPTRCTL                         slave
+     0000E6B8  _SETUPDAT                          slave
+     0000E6C0  _GPIFWFSELECT                      slave
+     0000E6C1  _GPIFIDLECS                        slave
+     0000E6C2  _GPIFIDLECTL                       slave
+     0000E6C3  _GPIFCTLCFG                        slave
+     0000E6C4  _GPIFADRH                          slave
+     0000E6C5  _GPIFADRL                          slave
+     0000E6C6  _FLOWSTATE                         slave
+     0000E6C7  _FLOWLOGIC                         slave
+     0000E6C8  _FLOWEQ0CTL                        slave
+     0000E6C9  _FLOWEQ1CTL                        slave
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E6CA  _FLOWHOLDOFF                       slave
+     0000E6CB  _FLOWSTB                           slave
+     0000E6CC  _FLOWSTBEDGE                       slave
+     0000E6CD  _FLOWSTBHPERIOD                    slave
+     0000E6CE  _GPIFTCB3                          slave
+     0000E6CF  _GPIFTCB2                          slave
+     0000E6D0  _GPIFTCB1                          slave
+     0000E6D1  _GPIFTCB0                          slave
+     0000E6D2  _EP2GPIFFLGSEL                     slave
+     0000E6D3  _EP2GPIFPFSTOP                     slave
+     0000E6D4  _EP2GPIFTRIG                       slave
+     0000E6DA  _EP4GPIFFLGSEL                     slave
+     0000E6DB  _EP4GPIFPFSTOP                     slave
+     0000E6DC  _EP4GPIFTRIG                       slave
+     0000E6E2  _EP6GPIFFLGSEL                     slave
+     0000E6E3  _EP6GPIFPFSTOP                     slave
+     0000E6E4  _EP6GPIFTRIG                       slave
+     0000E6EA  _EP8GPIFFLGSEL                     slave
+     0000E6EB  _EP8GPIFPFSTOP                     slave
+     0000E6EC  _EP8GPIFTRIG                       slave
+     0000E6F0  _XGPIFSGLDATH                      slave
+     0000E6F1  _XGPIFSGLDATLX                     slave
+     0000E6F2  _XGPIFSGLDATLNOX                   slave
+     0000E6F3  _GPIFREADYCFG                      slave
+     0000E6F4  _GPIFREADYSTAT                     slave
+     0000E6F5  _GPIFABORT                         slave
+     0000E740  _EP0BUF                            slave
+     0000E780  _EP1OUTBUF                         slave
+     0000E7C0  _EP1INBUF                          slave
+     0000F000  _EP2FIFOBUF                        slave
+     0000F400  _EP4FIFOBUF                        slave
+     0000F800  _EP6FIFOBUF                        slave
+     0000FC00  _EP8FIFOBUF                        slave
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    00000080 =         128. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000008  _GotSUD                            fw
+     00000009  _Rwuen                             fw
+     0000000A  _Selfpwr                           fw
+     0000000B  _Sleep                             fw
+     0000000C  _pDeviceDscr                       fw
+     0000000E  _pDeviceQualDscr                   fw
+     00000010  _pHighSpeedConfigDscr              fw
+     00000012  _pFullSpeedConfigDscr              fw
+     00000014  _pConfigDscr                       fw
+     00000016  _pOtherConfigDscr                  fw
+     00000018  _pStringDscr                       fw
+     0000001A  _Configuration                     slave
+     0000001B  _AlternateSetting                  slave
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                0000001C    000000E4 =         228. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000001C  __start__stack                     fw
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+XISEG                               00001000    00000003 =           3. bytes (REL,CON,XDATA)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    000001B9 =         441. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001B6  __sdcc_program_startup             fw
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             000001B9    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001B9  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             000001BC    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             000001C6    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001C6  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             000001E8    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001E8  __mcs51_genRAMCLEAR                
+C:   000001EE  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             00000212    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000215    00000735 =        1845. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000215  _main                              fw
+C:   000002E8  _HighSpeedCapable                  fw
+C:   000002EC  _SetupCommand                      fw
+C:   0000062F  _resume_isr                        fw
+C:   00000646  _TD_Init                           slave
+C:   000006E3  _TD_Poll                           slave
+C:   000006E4  _TD_Suspend                        slave
+C:   000006E8  _TD_Resume                         slave
+C:   000006EC  _DR_GetDescriptor                  slave
+C:   000006F0  _DR_SetConfiguration               slave
+C:   00000742  _DR_GetConfiguration               slave
+C:   00000756  _DR_SetInterface                   slave
+C:   00000760  _DR_GetInterface                   slave
+C:   00000774  _DR_GetStatus                      slave
+C:   00000778  _DR_ClearFeature                   slave
+C:   0000077C  _DR_SetFeature                     slave
+C:   00000780  _DR_VendorCmnd                     slave
+C:   00000784  _ISR_Sudav                         slave
+C:   000007AC  _ISR_Sutok                         slave
+C:   000007D1  _ISR_Sof                           slave
+C:   000007F6  _ISR_Ures                          slave
+C:   0000083D  _ISR_Susp                          slave
+C:   00000865  _ISR_Highspeed                     slave
+C:   000008AC  _ISR_Ep0ack                        slave
+C:   000008AD  _ISR_Stub                          slave
+C:   000008AE  _ISR_Ep0in                         slave
+C:   000008AF  _ISR_Ep0out                        slave
+C:   000008B0  _ISR_Ep1in                         slave
+C:   000008B1  _ISR_Ep1out                        slave
+C:   000008B2  _ISR_Ep2inout                      slave
+C:   000008B3  _ISR_Ep4inout                      slave
+C:   000008B4  _ISR_Ep6inout                      slave
+C:   000008B5  _ISR_Ep8inout                      slave
+C:   000008B6  _ISR_Ibn                           slave
+C:   000008B7  _ISR_Ep0pingnak                    slave
+C:   000008B8  _ISR_Ep1pingnak                    slave
+C:   000008B9  _ISR_Ep2pingnak                    slave
+C:   000008BA  _ISR_Ep4pingnak                    slave
+C:   000008BB  _ISR_Ep6pingnak                    slave
+C:   000008BC  _ISR_Ep8pingnak                    slave
+C:   000008BD  _ISR_Errorlimit                    slave
+C:   000008BE  _ISR_Ep2piderror                   slave
+C:   000008BF  _ISR_Ep4piderror                   slave
+C:   000008C0  _ISR_Ep6piderror                   slave
+C:   000008C1  _ISR_Ep8piderror                   slave
+C:   000008C2  _ISR_Ep2pflag                      slave
+C:   000008C3  _ISR_Ep4pflag                      slave
+C:   000008C4  _ISR_Ep6pflag                      slave
+C:   000008C5  _ISR_Ep8pflag                      slave
+C:   000008C6  _ISR_Ep2eflag                      slave
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000215    00000735 =        1845. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000008C7  _ISR_Ep4eflag                      slave
+C:   000008C8  _ISR_Ep6eflag                      slave
+C:   000008C9  _ISR_Ep8eflag                      slave
+C:   000008CA  _ISR_Ep2fflag                      slave
+C:   000008CB  _ISR_Ep4fflag                      slave
+C:   000008CC  _ISR_Ep6fflag                      slave
+C:   000008CD  _ISR_Ep8fflag                      slave
+C:   000008CE  _ISR_GpifComplete                  slave
+C:   000008CF  _ISR_GpifWaveform                  slave
+C:   000008D0  _DeviceDscr                        DSCR
+C:   000008E2  _DeviceQualDscr                    DSCR
+C:   000008EC  _HighSpeedConfigDscr               DSCR
+C:   0000090C  _FullSpeedConfigDscr               DSCR
+C:   0000092C  _StringDscr                        DSCR
+C:   00000944  _UserDscr                          DSCR
+C:   00000946  __sdcc_external_startup            _startup
+ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               0000094A    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000094A  _EPCS_Offset_Lookup_Table          fw
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+XINIT                               00000954    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
+
+Files Linked                              [ module(s) ]
+
+build_by_sdcc/fw.rel                      [  ]
+build_by_sdcc/slave.rel                   [  ]
+build_by_sdcc/dscr.rel                    [  ]
+build_by_sdcc/USBJmpTb.rel                [  ]
+
+
+Libraries Linked                          [ object file ]
+
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtclear.rel ]
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtxinit.rel ]
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtxclear.rel ]
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtstart.rel ]
+/usr/local/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
+
+User Base Address Definitions
+
+HOME = 0x0000
+XSEG = 0x1000
+PSEG = 0x1000
+ISEG = 0x0000
+BSEG = 0x0000
+
+
+?ASlink-Warning-Undefined Global '_EZUSB_Discon' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_EZUSB_GetStringDscr' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_EZUSB_Susp' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_EZUSB_Resume' referenced by module 'fw'

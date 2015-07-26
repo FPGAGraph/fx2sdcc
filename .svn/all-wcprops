@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave
+END
+slave.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/slave.c
+END
+dscr2.asm
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/dscr2.asm
+END
+fw.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fw.c
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/README
+END
+fifo.map
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fifo.map
+END
+fifo.mem
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fifo.mem
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/main.c
+END
+USBJmpTb.asm
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/USBJmpTb.asm
+END
+fifo.lnk
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fifo.lnk
+END
+fifo.hex
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fifo.hex
+END
+fx2fw.map
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fx2fw.map
+END
+fx2fw.mem
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fx2fw.mem
+END
+fifo.ihx
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fifo.ihx
+END
+dscr.asm
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/dscr.asm
+END
+fx2fw.bix
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fx2fw.bix
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/Makefile
+END
+fx2fw.lnk
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fx2fw.lnk
+END
+fx2fw.hex
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fx2fw.hex
+END
+dscr.a51
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/dscr.a51
+END
+fx2fw.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fx2fw.h
+END
+fx2fw.ihx
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/309/trunk/sw/fx2/fx2-fpga-slave/fx2fw.ihx
+END

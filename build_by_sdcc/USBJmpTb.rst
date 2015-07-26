@@ -1,0 +1,135 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 1.
+Hexadecimal [24-Bits]
+
+
+
+                                      1 .module JUMPTABLE
+                                      2 .globl USB_AutoVector
+                                      3 .globl USB_AutoVector2
+                                      4 .globl USB_Jump_Table
+                                      5 
+                                      6 ;-----------------------------------------------------------------------
+                                      7 ; Interrupt Vectors
+                                      8 ;-----------------------------------------------------------------------
+                                      9 
+                                     10 .area		USBJV	(ABS,OVR)
+      000043                         11 .org		0x43
+                           000045    12 USB_AutoVector	=	#. + 2
+      000043 02 1A 00         [24]   13 		ljmp	USB_Jump_Table	; Autovector will replace byte 45
+                                     14 
+                                     15 .area		USBJV2	(ABS,OVR)
+      000053                         16 .org		0x53
+                           000055    17 USB_AutoVector2	=	#. + 2
+      000053 02 1A 00         [24]   18 		ljmp	USB_Jump_Table	; Autovector will replace byte 55
+                                     19 
+                                     20 ;-----------------------------------------------------------------------
+                                     21 ; USB Jump Table
+                                     22 ;-----------------------------------------------------------------------
+                                     23 
+                                     24 .area		USBJT	(ABS)	; Place jump table on a page boundary
+      001A00                         25 		.org		0x1A00
+      001A00                         26 USB_Jump_Table:			; autovector jump table
+      001A00 02 07 84         [24]   27 		ljmp  _ISR_Sudav		;(00) Setup Data Available
+      001A03 00                      28 		.db   0
+      001A04 02 07 D1         [24]   29 		ljmp  _ISR_Sof			;(04) Start of Frame
+      001A07 00                      30 		.db   0
+      001A08 02 07 AC         [24]   31 		ljmp  _ISR_Sutok		;(08) Setup Data Loading
+      001A0B 00                      32 		.db   0
+      001A0C 02 08 3D         [24]   33 		ljmp  _ISR_Susp			;(0C) Global Suspend
+      001A0F 00                      34 		.db    0
+      001A10 02 07 F6         [24]   35 		ljmp  _ISR_Ures			;(10) USB Reset     
+      001A13 00                      36 		.db   0
+      001A14 02 08 65         [24]   37 		ljmp  _ISR_Highspeed	;(14) Entered High Speed
+      001A17 00                      38 		.db   0
+      001A18 02 08 AC         [24]   39 		ljmp  _ISR_Ep0ack		;(18) EP0ACK
+      001A1B 00                      40 		.db   0
+      001A1C 02 08 AD         [24]   41 		ljmp  _ISR_Stub			;(1C) Reserved
+      001A1F 00                      42 		.db   0
+      001A20 02 08 AE         [24]   43 		ljmp  _ISR_Ep0in		;(20) EP0 In
+      001A23 00                      44 		.db   0
+      001A24 02 08 AF         [24]   45 		ljmp  _ISR_Ep0out		;(24) EP0 Out
+      001A27 00                      46 		.db   0
+      001A28 02 08 B0         [24]   47 		ljmp  _ISR_Ep1in		;(28) EP1 In
+      001A2B 00                      48 		.db   0
+      001A2C 02 08 B1         [24]   49 		ljmp  _ISR_Ep1out		;(2C) EP1 Out
+      001A2F 00                      50 		.db   0
+      001A30 02 08 B2         [24]   51 		ljmp  _ISR_Ep2inout		;(30) EP2 In/Out
+      001A33 00                      52 		.db   0
+      001A34 02 08 B3         [24]   53 		ljmp  _ISR_Ep4inout		;(34) EP4 In/Out
+      001A37 00                      54 		.db   0
+      001A38 02 08 B4         [24]   55 		ljmp  _ISR_Ep6inout		;(38) EP6 In/Out
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 2.
+Hexadecimal [24-Bits]
+
+
+
+      001A3B 00                      56 		.db   0
+      001A3C 02 08 B5         [24]   57 		ljmp  _ISR_Ep8inout		;(3C) EP8 In/Out
+      001A3F 00                      58 		.db   0
+      001A40 02 08 B6         [24]   59 		ljmp  _ISR_Ibn			;(40) IBN
+      001A43 00                      60 		.db   0
+      001A44 02 08 AD         [24]   61 		ljmp  _ISR_Stub			;(44) Reserved
+      001A47 00                      62 		.db   0
+      001A48 02 08 B7         [24]   63 		ljmp  _ISR_Ep0pingnak	;(48) EP0 PING NAK
+      001A4B 00                      64 		.db   0
+      001A4C 02 08 B8         [24]   65 		ljmp  _ISR_Ep1pingnak	;(4C) EP1 PING NAK
+      001A4F 00                      66 		.db   0
+      001A50 02 08 B9         [24]   67 		ljmp  _ISR_Ep2pingnak	;(50) EP2 PING NAK
+      001A53 00                      68 		.db   0
+      001A54 02 08 BA         [24]   69 		ljmp  _ISR_Ep4pingnak	;(54) EP4 PING NAK
+      001A57 00                      70 		.db   0
+      001A58 02 08 BB         [24]   71 		ljmp  _ISR_Ep6pingnak	;(58) EP6 PING NAK
+      001A5B 00                      72 		.db   0
+      001A5C 02 08 BC         [24]   73 		ljmp  _ISR_Ep8pingnak	;(5C) EP8 PING NAK
+      001A5F 00                      74 		.db   0
+      001A60 02 08 BD         [24]   75 		ljmp  _ISR_Errorlimit	;(60) Error Limit
+      001A63 00                      76 		.db   0
+      001A64 02 08 AD         [24]   77 		ljmp  _ISR_Stub			;(64) Reserved
+      001A67 00                      78 		.db   0
+      001A68 02 08 AD         [24]   79 		ljmp  _ISR_Stub			;(68) Reserved
+      001A6B 00                      80 		.db   0
+      001A6C 02 08 AD         [24]   81 		ljmp  _ISR_Stub			;(6C) Reserved
+      001A6F 00                      82 		.db   0
+      001A70 02 08 BE         [24]   83 		ljmp  _ISR_Ep2piderror	;(70) EP2 ISO Pid Sequence Error
+      001A73 00                      84 		.db   0
+      001A74 02 08 BF         [24]   85 		ljmp  _ISR_Ep4piderror	;(74) EP4 ISO Pid Sequence Error
+      001A77 00                      86 		.db   0
+      001A78 02 08 C0         [24]   87 		ljmp  _ISR_Ep6piderror	;(78) EP6 ISO Pid Sequence Error
+      001A7B 00                      88 		.db   0
+      001A7C 02 08 C1         [24]   89 		ljmp  _ISR_Ep8piderror	;(7C) EP8 ISO Pid Sequence Error
+      001A7F 00                      90 		.db   0
+                                     91 ;INT4_Jump_Table
+      001A80 02 08 C2         [24]   92 		ljmp  _ISR_Ep2pflag		;(80) EP2 Programmable Flag
+      001A83 00                      93 		.db   0
+      001A84 02 08 C3         [24]   94 		ljmp  _ISR_Ep4pflag		;(84) EP4 Programmable Flag
+      001A87 00                      95 		.db   0
+      001A88 02 08 C4         [24]   96 		ljmp  _ISR_Ep6pflag		;(88) EP6 Programmable Flag
+      001A8B 00                      97 		.db   0
+      001A8C 02 08 C5         [24]   98 		ljmp  _ISR_Ep8pflag		;(8C) EP8 Programmable Flag
+      001A8F 00                      99 		.db   0
+      001A90 02 08 C6         [24]  100 		ljmp  _ISR_Ep2eflag		;(90) EP2 Empty Flag
+      001A93 00                     101 		.db   0
+      001A94 02 08 C7         [24]  102 		ljmp  _ISR_Ep4eflag		;(94) EP4 Empty Flag
+      001A97 00                     103 		.db   0
+      001A98 02 08 C8         [24]  104 		ljmp  _ISR_Ep6eflag		;(98) EP6 Empty Flag
+      001A9B 00                     105 		.db   0
+      001A9C 02 08 C9         [24]  106 		ljmp  _ISR_Ep8eflag		;(9C) EP8 Empty Flag
+      001A9F 00                     107 		.db   0
+      001AA0 02 08 CA         [24]  108 		ljmp  _ISR_Ep2fflag		;(A0) EP2 Full Flag
+      001AA3 00                     109 		.db   0
+      001AA4 02 08 CB         [24]  110 		ljmp  _ISR_Ep4fflag		;(A4) EP4 Full Flag
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 3.
+Hexadecimal [24-Bits]
+
+
+
+      001AA7 00                     111 		.db   0
+      001AA8 02 08 CC         [24]  112 		ljmp  _ISR_Ep6fflag		;(A8) EP6 Full Flag
+      001AAB 00                     113 		.db   0
+      001AAC 02 08 CD         [24]  114 		ljmp  _ISR_Ep8fflag		;(AC) EP8 Full Flag
+      001AAF 00                     115 		.db   0
+      001AB0 02 08 CE         [24]  116 		ljmp  _ISR_GpifComplete	;(B0) GPIF Operation Complete
+      001AB3 00                     117 		.db   0
+      001AB4 02 08 CF         [24]  118 		ljmp  _ISR_GpifWaveform	;(B4) GPIF Waveform
+      001AB7 00                     119 		.db   0
+                                    120 

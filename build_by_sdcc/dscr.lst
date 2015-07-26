@@ -1,0 +1,209 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 1.
+Hexadecimal [24-Bits]
+
+
+
+                                      1 ;;-----------------------------------------------------------------------------
+                                      2 ;;   File:      dscr.a51
+                                      3 ;;   Contents:  This file contains descriptor data tables.  
+                                      4 ;;
+                                      5 ;;   Copyright (c) 2003 Cypress Semiconductor, Inc. All rights reserved
+                                      6 ;;-----------------------------------------------------------------------------
+                                      7  
+                                      8 .module DSCR
+                                      9   
+                           000001    10 DSCR_DEVICE   =   1  ;; Descriptor type: Device
+                           000002    11 DSCR_CONFIG   =   2  ;; Descriptor type: Configuration
+                           000003    12 DSCR_STRING   =   3  ;; Descriptor type: String
+                           000004    13 DSCR_INTRFC   =   4  ;; Descriptor type: Interface
+                           000005    14 DSCR_ENDPNT   =   5  ;; Descriptor type: Endpoint
+                           000006    15 DSCR_DEVQUAL  =   6  ;; Descriptor type: Device Qualifier
+                                     16 
+                           000012    17 DSCR_DEVICE_LEN   =   18
+                           000009    18 DSCR_CONFIG_LEN   =    9
+                           000009    19 DSCR_INTRFC_LEN   =    9
+                           000007    20 DSCR_ENDPNT_LEN   =    7
+                           00000A    21 DSCR_DEVQUAL_LEN  =   10
+                                     22 
+                           000000    23 ET_CONTROL   =   0   ;; Endpoint type: Control
+                           000001    24 ET_ISO       =   1   ;; Endpoint type: Isochronous
+                           000002    25 ET_BULK      =   2   ;; Endpoint type: Bulk
+                           000003    26 ET_INT       =   3   ;; Endpoint type: Interrupt
+                                     27 
+                                     28 .globl	_DeviceDscr, _DeviceQualDscr, _HighSpeedConfigDscr, _FullSpeedConfigDscr, _StringDscr, _UserDscr
+                                     29 
+                                     30 .area	CSEG	(CODE)
+                                     31 
+                                     32 ;;-----------------------------------------------------------------------------
+                                     33 ;; Global Variables
+                                     34 ;;-----------------------------------------------------------------------------
+                                     35 
+      000000                         36 _DeviceDscr:
+      000000                         37 DeviceDscr:
+      000000 12                      38 	.db	deviceDscrEnd - DeviceDscr		;; Descriptor length
+      000001 01                      39 	.db	DSCR_DEVICE						;; Decriptor type
+      000002 00 02                   40 	.dw	0x0002							;; Specification Version (BCD)
+      000004 00                      41 	.db	0x00  							;; Device class
+      000005 00                      42 	.db	0x00							;; Device sub-class
+      000006 00                      43 	.db	0x00							;; Device sub-sub-class
+      000007 40                      44 	.db	64								;; Maximum packet size
+      000008 B4 04                   45 	.dw	0xB404							;; Vendor ID
+      00000A 04 10                   46 	.dw	0x0410							;; Product ID (Sample Device)
+      00000C 01 00                   47 	.dw	0x0100							;; Product version ID
+      00000E 01                      48 	.db	1								;; Manufacturer string index
+      00000F 02                      49 	.db	2								;; Product string index
+      000010 00                      50 	.db	0								;; Serial number string index
+      000011 01                      51 	.db	1								;; Number of configurations
+      000012                         52 deviceDscrEnd:
+                                     53 
+      000012                         54 _DeviceQualDscr:
+      000012                         55 DeviceQualDscr:
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 2.
+Hexadecimal [24-Bits]
+
+
+
+      000012 0A                      56 	.db	deviceQualDscrEnd - DeviceQualDscr	;; Descriptor length
+      000013 06                      57 	.db	DSCR_DEVQUAL						;; Decriptor type
+      000014 00 02                   58 	.dw	0x0002								;; Specification Version (BCD)
+      000016 00                      59 	.db	0x00								;; Device class
+      000017 00                      60 	.db	0x00								;; Device sub-class
+      000018 00                      61 	.db	0x00								;; Device sub-sub-class
+      000019 40                      62 	.db	64									;; Maximum packet size
+      00001A 01                      63 	.db	1									;; Number of configurations
+      00001B 00                      64 	.db	0									;; Reserved
+      00001C                         65 deviceQualDscrEnd:
+                                     66 
+      00001C                         67 _HighSpeedConfigDscr:
+      00001C 09                      68 	.db	DSCR_CONFIG_LEN											;; Descriptor length
+      00001D 02                      69 	.db	DSCR_CONFIG												;; Descriptor type
+      00001E 20                      70 	.db	(HighSpeedConfigDscrEnd - _HighSpeedConfigDscr) % 256	;; Total Length (LSB)
+      00001F 00                      71 	.db	(HighSpeedConfigDscrEnd - _HighSpeedConfigDscr) / 256	;; Total Length (MSB)
+      000020 01                      72 	.db	1														;; Number of interfaces
+      000021 01                      73 	.db	1														;; Configuration number
+      000022 00                      74 	.db	0														;; Configuration string
+      000023 A0                      75 	.db	0b10100000												;; Attributes (b7 - buspwr, b6 - selfpwr, b5 - rwu)
+      000024 32                      76 	.db	50														;; Power requirement (div 2 ma)
+                                     77 
+                                     78 ;; Interface Descriptor
+      000025 09                      79 	.db	DSCR_INTRFC_LEN		;; Descriptor length
+      000026 04                      80 	.db	DSCR_INTRFC			;; Descriptor type
+      000027 00                      81 	.db	0					;; Zero-based index of this interface
+      000028 00                      82 	.db	0					;; Alternate setting
+      000029 02                      83 	.db	2					;; Number of end points 
+      00002A FF                      84 	.db	0xff				;; Interface class
+      00002B 00                      85 	.db	0x00				;; Interface sub class
+      00002C 00                      86 	.db	0x00				;; Interface sub sub class
+      00002D 00                      87 	.db	0					;; Interface descriptor string index
+                                     88       
+                                     89 ;; Endpoint Descriptor(O_2)
+      00002E 07                      90 	.db	DSCR_ENDPNT_LEN		;; Descriptor length
+      00002F 05                      91 	.db	DSCR_ENDPNT			;; Descriptor type
+      000030 02                      92 	.db	0x02				;; Endpoint number, and direction
+      000031 02                      93 	.db	ET_BULK				;; Endpoint type
+      000032 00                      94 	.db	0x00				;; Maximun packet size (LSB)
+      000033 02                      95 	.db	0x02				;; Max packect size (MSB)
+      000034 00                      96 	.db	0x00				;; Polling interval
+                                     97 
+                                     98 
+                                     99 ;; Endpoint Descriptor(I_6)
+      000035 07                     100 	.db	DSCR_ENDPNT_LEN		;; Descriptor length
+      000036 05                     101 	.db	DSCR_ENDPNT			;; Descriptor type
+      000037 86                     102 	.db	0x86				;; Endpoint number, and direction
+      000038 02                     103 	.db	ET_BULK				;; Endpoint type
+      000039 00                     104 	.db	0x00				;; Maximun packet size (LSB)
+      00003A 02                     105 	.db	0x02				;; Max packect size (MSB)
+      00003B 00                     106 	.db	0x00				;; Polling interval
+                                    107 
+      00003C                        108 HighSpeedConfigDscrEnd:   
+                                    109 
+      00003C                        110 _FullSpeedConfigDscr:
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 3.
+Hexadecimal [24-Bits]
+
+
+
+      00003C 09                     111 	.db	DSCR_CONFIG_LEN											;; Descriptor length
+      00003D 02                     112 	.db	DSCR_CONFIG												;; Descriptor type
+      00003E 20                     113 	.db	(FullSpeedConfigDscrEnd - _FullSpeedConfigDscr) % 256	;; Total Length (LSB)
+      00003F 00                     114 	.db	(FullSpeedConfigDscrEnd - _FullSpeedConfigDscr) / 256	;; Total Length (MSB)
+      000040 01                     115 	.db	1														;; Number of interfaces
+      000041 01                     116 	.db	1														;; Configuration number
+      000042 00                     117 	.db	0														;; Configuration string
+      000043 A0                     118 	.db	0b10100000												;; Attributes (b7 - buspwr, b6 - selfpwr, b5 - rwu)
+      000044 32                     119 	.db	50	
+                                    120 
+                                    121 ;; Interface Descriptor
+      000045 09                     122 	.db	DSCR_INTRFC_LEN		;; Descriptor length
+      000046 04                     123 	.db	DSCR_INTRFC			;; Descriptor type
+      000047 00                     124 	.db	0					;; Zero-based index of this interface
+      000048 00                     125 	.db	0					;; Alternate setting
+      000049 02                     126 	.db	2					;; Number of end points 
+      00004A FF                     127 	.db	0xff				;; Interface class
+      00004B 00                     128 	.db	0x00				;; Interface sub class
+      00004C 00                     129 	.db	0x00				;; Interface sub sub class
+      00004D 00                     130 	.db	0					;; Interface descriptor string index
+                                    131       
+                                    132 ;; Endpoint Descriptor(O_2)
+      00004E 07                     133 	.db	DSCR_ENDPNT_LEN		;; Descriptor length
+      00004F 05                     134 	.db	DSCR_ENDPNT			;; Descriptor type
+      000050 02                     135 	.db	0x02				;; Endpoint number, and direction
+      000051 02                     136 	.db	ET_BULK				;; Endpoint type
+      000052 40                     137 	.db	0x40				;; Maximun packet size (LSB)
+      000053 00                     138 	.db	0x00				;; Max packect size (MSB)
+      000054 00                     139 	.db	0x00				;; Polling interval
+                                    140 
+                                    141 ;; Endpoint Descriptor(I_6)
+      000055 07                     142 	.db	DSCR_ENDPNT_LEN		;; Descriptor length
+      000056 05                     143 	.db	DSCR_ENDPNT			;; Descriptor type
+      000057 86                     144 	.db	0x86				;; Endpoint number, and direction
+      000058 02                     145 	.db	ET_BULK				;; Endpoint type
+      000059 40                     146 	.db	0x40				;; Maximun packet size (LSB)
+      00005A 00                     147 	.db	0x00				;; Max packect size (MSB)
+      00005B 00                     148 	.db	0x00				;; Polling interval
+                                    149 
+      00005C                        150 FullSpeedConfigDscrEnd:   
+                                    151 
+      00005C                        152 _StringDscr:
+      00005C                        153 StringDscr:
+      00005C                        154 StringDscr0:
+      00005C 04                     155 	.db	StringDscr0End-StringDscr0		;; String descriptor length
+      00005D 03                     156 	.db	DSCR_STRING
+      00005E 04 04                  157 	.db	0x04,0x04
+      000060                        158 StringDscr0End:
+                                    159 
+      000060                        160 StringDscr1:	
+      000060 0A                     161 	.db	StringDscr1End-StringDscr1		;; String descriptor length
+      000061 03                     162 	.db	DSCR_STRING
+      000062 46                     163 	.ascii 'F'
+      000063 00                     164 	.db 0x00
+      000064 32                     165 	.ascii '2'
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 4.
+Hexadecimal [24-Bits]
+
+
+
+      000065 00                     166 	.db	0x00
+      000066 46                     167 	.ascii 'F'
+      000067 00                     168 	.db	0x00
+      000068 57                     169 	.ascii 'W'
+      000069 00                     170 	.db	0x00
+      00006A                        171 StringDscr1End:
+                                    172 
+      00006A                        173 StringDscr2:	
+      00006A 0A                     174 	.db	StringDscr2End-StringDscr2		;; Descriptor length
+      00006B 03                     175 	.db	DSCR_STRING
+      00006C 56                     176 	.ascii 'V'
+      00006D 00                     177 	.db	0x00
+      00006E 31                     178 	.ascii '1'
+      00006F 00                     179 	.db	0x00
+      000070 30                     180 	.ascii '0'
+      000071 00                     181 	.db	0x00
+      000072 30                     182 	.ascii '0'
+      000073 00                     183 	.db	0x00
+      000074                        184 StringDscr2End:
+                                    185 
+      000074                        186 _UserDscr:
+      000074                        187 UserDscr:
+      000074 00 00                  188 	.dw	0x0000
+                                    189       
